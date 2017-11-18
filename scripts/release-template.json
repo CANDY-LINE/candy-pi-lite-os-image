@@ -1,0 +1,7 @@
+{
+  "tag_name": "%TAG_NAME%",
+  "name": "%RELEASE_NAME%",
+  "body": "%RELEASE_DESCRIPTION%",
+  "draft": false,
+  "prerelease": false
+}

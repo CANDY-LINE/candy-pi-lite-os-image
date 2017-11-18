@@ -2,6 +2,11 @@ sudo: required
 
 language: generic
 
+# Run only on tagged branch
+branches:
+  only:
+    - /^[0-9]/
+
 services:
 - docker
 

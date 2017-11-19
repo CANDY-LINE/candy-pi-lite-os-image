@@ -45,7 +45,7 @@ TYPICAL_IMAGE_INFO=`ls ./deploy/*en_US.info`
 BUILT_ON=${TYPICAL_IMAGE_INFO:9:10}
 REPO=CANDY-LINE/candy-pi-lite-os-image
 RELEASE_NAME="v${TAG_NAME}"
-RELEASE_DESCRIPTION="${RELEASE_DESCRIPTION:-${RASPBIAN_TAG} with [CANDY Pi Lite](https://github.com/CANDY-LINE/candy-pi-lite-service) and [CANDY RED](https://github.com/CANDY-LINE/candy-red) Software Built on ${BUILT_ON}}"
+RELEASE_DESCRIPTION="${RELEASE_DESCRIPTION:-[${RASPBIAN_TAG}](https://github.com/RPi-Distro/pi-gen/tree/${RASPBIAN_TAG}) dedicated to [CANDY Pi Lite](https://github.com/CANDY-LINE/candy-pi-lite-service) board built on ${BUILT_ON}}"
 
 fetch_upload_url
 upload_zip_files

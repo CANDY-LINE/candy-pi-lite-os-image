@@ -3,8 +3,12 @@
 DEPS_DIR=$(pwd)/deps
 PIGEN_DIR=${DEPS_DIR}/pi-gen
 
-function update_sibmodules {
+function clean_setup {
   git submodule update --init --recursive
+  pushd ${PIGEN_DIR}
+  git reset --hard HEAD
+  git clean -f -d
+  popd
 }
 
 function create_config {
@@ -32,7 +36,7 @@ function configure_scripts {
   cp -f $(pwd)/scripts/common ${PIGEN_DIR}/scripts
 }
 
-update_sibmodules
+clean_setup
 create_config
 configure_stages
 configure_scripts

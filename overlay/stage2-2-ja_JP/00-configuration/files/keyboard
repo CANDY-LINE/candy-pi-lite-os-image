@@ -2,7 +2,7 @@
 
 # Consult the keyboard(5) manual page.
 
-XKBMODEL="OADG109A"
+XKBMODEL="jp106"
 XKBLAYOUT="jp"
 XKBVARIANT=""
 XKBOPTIONS="lv3:ralt_switch"

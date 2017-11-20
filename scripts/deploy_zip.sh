@@ -25,6 +25,19 @@ function fetch_upload_url {
   UPLOAD_URL="${UPLOAD_URL%\{*}"
 }
 
+function upload_info_files {
+  for INFO in `ls ./deploy/*.info`; do
+    echo "Uploading [${INFO}]..."
+    FILENAME=`basename ${INFO}`
+    curl -v -s \
+      -H "Authorization: token ${GITHUB_OAUTH_TOKEN}"  \
+      -H "Content-Type: text/plain" \
+      --data-binary @${INFO} \
+      "${UPLOAD_URL}?name=${FILENAME}"
+  done
+  echo "INFO Upload done"
+}
+
 function upload_zip_files {
   for ZIP in `ls ./deploy/*.zip`; do
     echo "Uploading [${ZIP}]..."
@@ -35,7 +48,7 @@ function upload_zip_files {
       --data-binary @${ZIP} \
       "${UPLOAD_URL}?name=${FILENAME}"
   done
-  echo "Upload done"
+  echo "ZIP Upload done"
 }
 
 # main
@@ -48,4 +61,5 @@ RELEASE_NAME="v${TAG_NAME}"
 RELEASE_DESCRIPTION="${RELEASE_DESCRIPTION:-[${RASPBIAN_TAG}](https://github.com/RPi-Distro/pi-gen/tree/${RASPBIAN_TAG}) dedicated to [CANDY Pi Lite](https://github.com/CANDY-LINE/candy-pi-lite-service) board built on ${BUILT_ON}}"
 
 fetch_upload_url
+upload_info_files
 upload_zip_files

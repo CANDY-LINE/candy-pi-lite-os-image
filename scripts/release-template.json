@@ -1,7 +1,7 @@
 {
   "tag_name": "%TAG_NAME%",
   "name": "%RELEASE_NAME%",
-  "body": "%RELEASE_DESCRIPTION%",
+  "body": "%RELEASE_DESCRIPTION%\n\n- `en_US` image contains US Keyboard Layout setting with UTC timezone and en_US.UTF-8 locale.\n- `ja_JP` イメージファイルには、日本語106キーボート、日本時間のタイムゾーン、それに日本語UTF-8の設定が含まれます。[SDへの焼き込みについてはこちらをご覧ください。](http://candy-line.tumblr.com/)",
   "draft": false,
   "prerelease": false
 }

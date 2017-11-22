@@ -29,7 +29,7 @@ function upload_info_files {
   for INFO in `ls ./deploy/*.info`; do
     echo "Uploading [${INFO}]..."
     FILENAME=`basename ${INFO}`
-    curl -v -s \
+    curl -s \
       -H "Authorization: token ${GITHUB_OAUTH_TOKEN}"  \
       -H "Content-Type: text/plain" \
       --data-binary @${INFO} \
@@ -42,7 +42,7 @@ function upload_zip_files {
   for ZIP in `ls ./deploy/*.zip`; do
     echo "Uploading [${ZIP}]..."
     FILENAME=`basename ${ZIP}`
-    curl -v -s \
+    curl -s \
       -H "Authorization: token ${GITHUB_OAUTH_TOKEN}"  \
       -H "Content-Type: application/zip" \
       --data-binary @${ZIP} \

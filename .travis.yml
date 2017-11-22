@@ -15,4 +15,4 @@ before_script:
 
 script:
 - ./scripts/build_img.sh
-- ./scripts/deploy_zip.sh
+- TAG_NAME=${TRAVIS_TAG} ./scripts/deploy_zip.sh

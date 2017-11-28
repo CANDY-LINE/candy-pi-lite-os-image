@@ -27,6 +27,7 @@ ARMv7+ boards are available for this image.
   - `git`
   - `screen`
   - `fswebcam`
+  - `sense-hat`
 
 ## Distributions
 
@@ -38,6 +39,10 @@ ARMv7+ boards are available for this image.
 Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform app.
 
 # Revision History
+
+* 1.1.0
+  - Sense HAT support
+  - Improve package installation time
 
 * 1.0.0
   - Initial Release

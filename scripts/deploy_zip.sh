@@ -17,10 +17,15 @@ function fetch_upload_url {
     sed -i -e "s/%${e}%/${!e//\//\\/}/g" release.json
   done
   rm -f release.json-e
-  RESP=$(curl -sSL \
+  RESP=$(curl -fsSL \
     -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
     -d @release.json \
     "https://api.github.com/repos/${REPO}/releases")
+  if [ "$?" != "0" ]; then
+    RESP=$(curl -fsSL \
+      -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
+      "https://api.github.com/repos/${REPO}/releases/tags/${TAG_NAME}")
+  fi
   UPLOAD_URL=`echo ${RESP} | jq -r '.upload_url'`
   UPLOAD_URL="${UPLOAD_URL%\{*}"
 }
@@ -29,7 +34,7 @@ function upload_info_files {
   for INFO in `ls ./deploy/*.info`; do
     echo "Uploading [${INFO}]..."
     FILENAME=`basename ${INFO}`
-    curl -v -s \
+    curl -s \
       -H "Authorization: token ${GITHUB_OAUTH_TOKEN}"  \
       -H "Content-Type: text/plain" \
       --data-binary @${INFO} \
@@ -42,7 +47,7 @@ function upload_zip_files {
   for ZIP in `ls ./deploy/*.zip`; do
     echo "Uploading [${ZIP}]..."
     FILENAME=`basename ${ZIP}`
-    curl -v -s \
+    curl -s \
       -H "Authorization: token ${GITHUB_OAUTH_TOKEN}"  \
       -H "Content-Type: application/zip" \
       --data-binary @${ZIP} \

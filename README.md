@@ -27,6 +27,7 @@ ARMv7+ boards are available for this image.
   - `git`
   - `screen`
   - `fswebcam`
+  - `sense-hat`
 
 ## Distributions
 

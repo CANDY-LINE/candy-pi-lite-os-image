@@ -40,5 +40,9 @@ Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform
 
 # Revision History
 
+* 1.1.0
+  - Sense HAT support
+  - Improve package installation time
+
 * 1.0.0
   - Initial Release

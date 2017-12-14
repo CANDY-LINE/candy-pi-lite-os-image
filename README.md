@@ -41,7 +41,8 @@ Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform
 # Revision History
 
 * 1.2.0
-  - Support CANDY RED 5.5.0
+  - CANDY Pi Lite Board Service 1.7.2
+  - CANDY RED 5.5.0
 
 * 1.1.0
   - Sense HAT support

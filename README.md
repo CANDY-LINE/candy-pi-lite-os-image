@@ -19,10 +19,10 @@ ARMv7+ boards are available for this image.
 - [Raspbian OS Lite (RASPBIAN STRETCH LITE)](https://www.raspberrypi.org/downloads/raspbian/) based image with software updates
 - [CANDY Pi Lite Board Service](https://github.com/CANDY-LINE/candy-pi-lite-service) is installed
 - [CANDY RED](https://github.com/CANDY-LINE/candy-red), a Node-RED based software dedicated to [CANDY Pi Lite Board](https://translate.google.com/translate?sl=auto&tl=en&js=y&prev=_t&hl=en&ie=UTF-8&u=https%3A%2F%2Fwww.candy-line.io%2F製品一覧%2Fcandy-pi-lite%2F&edit-text=&act=url) and [CANDY EGG Cloud Service](https://translate.google.com/translate?hl=en&sl=ja&tl=en&u=https%3A%2F%2Fwww.candy-line.io%2F製品一覧%2Fcandy-red-egg%2F), is installed
-- ufw is enabled (denying from all traffic on `ppp0` and `wwan0`)
+- `ufw` is enabled (denying from all traffic on `ppp0` and `wwan0`)
 - Hardware watchdog is enabled
 - Node.js v6 is installed (in Maintenance LTS)
-- `ssh` is **DISABLED** by default. Place am empty file to `/boot/ssh` to enable ssh
+- `ssh` is **DISABLED** by default. Place an empty file as `/boot/ssh` to enable it
 - Extra Packages
   - `git`
   - `screen`

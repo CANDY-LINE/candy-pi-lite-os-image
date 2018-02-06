@@ -40,6 +40,10 @@ Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform
 
 # Revision History
 
+* 2.0.1
+  - CANDY Pi Lite Board Service 1.8.2
+  - CANDY RED 5.6.1
+
 * 2.0.0
   - Update Base Raspbian Stretch version to `2017-11-29-raspbian-stretch`
   - CANDY Pi Lite Board Service 1.8.0

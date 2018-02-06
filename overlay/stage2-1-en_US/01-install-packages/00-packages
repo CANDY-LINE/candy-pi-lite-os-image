@@ -5,7 +5,7 @@ screen
 python-dev
 libpam0g-dev
 libudev-dev
-libjpeg8-dev
+libjpeg-dev
 bluez
 nodejs
 fswebcam

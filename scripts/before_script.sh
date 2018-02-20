@@ -2,6 +2,7 @@
 
 DEPS_DIR=$(pwd)/deps
 PIGEN_DIR=${DEPS_DIR}/pi-gen
+MOVIDIUS=${MOVIDIUS:-0}
 
 function clean_setup {
   git submodule update --init --recursive
@@ -34,6 +35,9 @@ function configure_stages {
 
 function configure_scripts {
   cp -f $(pwd)/scripts/common ${PIGEN_DIR}/scripts
+  if [ "${MOVIDIUS}" != "1" ]; then
+    rm -fr ${PIGEN_DIR}/stage2-0-movidius
+  fi
 }
 
 clean_setup

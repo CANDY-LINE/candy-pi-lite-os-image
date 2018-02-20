@@ -5,8 +5,13 @@ Raspbian OS image builder for [CANDY Pi Lite Board](https://translate.google.com
 
 # Supported Raspberry Pi
 
-ARMv7+ boards are available for this image.
+ARMv6/ARMv7 boards are available for this image.
 
+- [Raspberry Pi Zero (Pin Header is required)](https://www.raspberrypi.org/products/raspberry-pi-zero/)
+- [Raspberry Pi Zero W (Pin Header is required)](https://www.raspberrypi.org/products/raspberry-pi-zero/)
+- [Raspberry Pi Zero WH](https://www.raspberrypi.org/blog/zero-wh/)
+- [Raspberry Pi  Model A+](https://www.raspberrypi.org/products/raspberry-pi-1-model/)
+- [Raspberry Pi  Model B+](https://www.raspberrypi.org/products/raspberry-pi-1-model-b/)
 - [Raspberry Pi2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
 - [Raspberry Pi3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 
@@ -21,7 +26,7 @@ ARMv7+ boards are available for this image.
 - [CANDY RED](https://github.com/CANDY-LINE/candy-red), a Node-RED based software dedicated to [CANDY Pi Lite Board](https://translate.google.com/translate?sl=auto&tl=en&js=y&prev=_t&hl=en&ie=UTF-8&u=https%3A%2F%2Fwww.candy-line.io%2F製品一覧%2Fcandy-pi-lite%2F&edit-text=&act=url) and [CANDY EGG Cloud Service](https://translate.google.com/translate?hl=en&sl=ja&tl=en&u=https%3A%2F%2Fwww.candy-line.io%2F製品一覧%2Fcandy-red-egg%2F), is installed
 - `ufw` is enabled (denying from all traffic on `ppp0` and `wwan0`)
 - Hardware watchdog is enabled
-- Node.js v6 is installed (in Maintenance LTS)
+- Node.js v6 (armv6l) is installed (in Maintenance LTS)
 - `ssh` is **DISABLED** by default. Place an empty file as `/boot/ssh` to enable it
 - Extra Packages
   - `git`
@@ -39,6 +44,11 @@ ARMv7+ boards are available for this image.
 Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform app.
 
 # Revision History
+
+* 2.1.0
+  - ARMv6 Raspberry Pi Boards(Zero/Zero W/Zero WH/Model A+/Model B+) Support
+  - CANDY Pi Lite Board Service 2.0.0
+  - CANDY RED 5.6.1
 
 * 2.0.1
   - CANDY Pi Lite Board Service 1.8.2

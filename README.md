@@ -45,6 +45,9 @@ Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform
 
 # Revision History
 
+* 2.1.1
+  - CANDY Pi Lite Board Service 2.0.1
+
 * 2.1.0
   - ARMv6 Raspberry Pi Boards(Zero/Zero W/Zero WH/Model A+/Model B+) Support
   - CANDY Pi Lite Board Service 2.0.0

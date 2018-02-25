@@ -7,6 +7,5 @@ libpam0g-dev
 libudev-dev
 libjpeg-dev
 bluez
-nodejs
 fswebcam
 sense-hat

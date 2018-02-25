@@ -45,6 +45,9 @@ Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform
 
 # Revision History
 
+* 2.1.2
+  - Remove nodejs package
+
 * 2.1.1
   - CANDY Pi Lite Board Service 2.0.1
 

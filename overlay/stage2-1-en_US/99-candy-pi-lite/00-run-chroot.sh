@@ -11,5 +11,10 @@ curl -sL \
   CANDY_PI_LITE_APT_GET_UPDATED=1 \
   bash
 
+# Enable UFW
+if ufw status | grep inactive > /dev/null 2>&1; then
+  ufw --force enable
+fi
+
 # Sense HAT node
 pip install pillow

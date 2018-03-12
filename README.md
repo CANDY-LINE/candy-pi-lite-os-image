@@ -45,6 +45,9 @@ Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform
 
 # Revision History
 
+* 2.1.4
+  - Fix an issue where `ufw` was inactive
+
 * 2.1.3
   - CANDY Pi Lite Board Service 2.0.2
 

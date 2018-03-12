@@ -12,9 +12,7 @@ curl -sL \
   bash
 
 # Enable UFW
-if ufw status | grep inactive > /dev/null 2>&1; then
-  ufw --force enable
-fi
+ufw --force enable
 
 # Sense HAT node
 pip install pillow

@@ -17,7 +17,7 @@ ARMv6/ARMv7 boards are available for this image.
 
 # Raspbian OS Version
 
-- Raspbian Stretch Version 2017-09-07 (Kernel v4.9) with some library updates at the time of the image creation
+- Raspbian Stretch Version 2017-11-29 (Kernel v4.9) with some library updates at the time of the image creation
 
 # Features
 

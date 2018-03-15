@@ -17,7 +17,7 @@ ARMv6/ARMv7 boards are available for this image.
 
 # Raspbian OS Version
 
-- Raspbian Stretch Version 2017-09-07 (Kernel v4.9) with some library updates at the time of the image creation
+- Raspbian Stretch Version 2017-11-29 (Kernel v4.9) with some library updates at the time of the image creation
 
 # Features
 
@@ -44,6 +44,10 @@ ARMv6/ARMv7 boards are available for this image.
 Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform app.
 
 # Revision History
+
+* 2.2.0
+  - CANDY Pi Lite Board Service 3.0.0
+  - CANDY RED 6.0.0
 
 * 2.1.4
   - Fix an issue where `ufw` was inactive

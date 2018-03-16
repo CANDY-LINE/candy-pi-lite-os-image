@@ -17,7 +17,7 @@ ARMv6/ARMv7 boards are available for this image.
 
 # Raspbian OS Version
 
-- Raspbian Stretch Version 2017-11-29 (Kernel v4.9) with some library updates at the time of the image creation
+- Raspbian Stretch Version March 2018 (Release date: 2018-03-13, Kernel: v4.9) with some library updates at the time of the image creation
 
 # Features
 
@@ -44,6 +44,9 @@ ARMv6/ARMv7 boards are available for this image.
 Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform app.
 
 # Revision History
+
+* 3.0.0
+  - Update Base Raspbian Stretch version to `2018-03-13-raspbian-stretch`
 
 * 2.2.0
   - CANDY Pi Lite Board Service 3.0.0

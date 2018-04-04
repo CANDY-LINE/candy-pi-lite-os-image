@@ -28,11 +28,14 @@ ARMv6/ARMv7 boards are available for this image.
 - Hardware watchdog is enabled
 - Node.js v6 (armv6l) is installed (in Maintenance LTS)
 - `ssh` is **DISABLED** by default. Place an empty file as `/boot/ssh` to enable it
-- Extra Packages
+- Extra Debian Packages
   - `git`
   - `screen`
   - `fswebcam`
   - `sense-hat`
+- Extra Python Packages
+  - `pillow`
+  - `pyserial`
 
 ## Distributions
 

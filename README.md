@@ -10,8 +10,8 @@ ARMv6/ARMv7 boards are available for this image.
 - [Raspberry Pi Zero (Pin Header is required)](https://www.raspberrypi.org/products/raspberry-pi-zero/)
 - [Raspberry Pi Zero W (Pin Header is required)](https://www.raspberrypi.org/products/raspberry-pi-zero/)
 - [Raspberry Pi Zero WH](https://www.raspberrypi.org/blog/zero-wh/)
-- [Raspberry Pi  Model A+](https://www.raspberrypi.org/products/raspberry-pi-1-model/)
-- [Raspberry Pi  Model B+](https://www.raspberrypi.org/products/raspberry-pi-1-model-b/)
+- [Raspberry Pi Model A+](https://www.raspberrypi.org/products/raspberry-pi-1-model/)
+- [Raspberry Pi Model B+](https://www.raspberrypi.org/products/raspberry-pi-1-model-b/)
 - [Raspberry Pi2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
 - [Raspberry Pi3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 

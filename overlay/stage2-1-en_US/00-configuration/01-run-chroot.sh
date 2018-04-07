@@ -23,3 +23,6 @@ cd node-v${ARMv6_NODEJS_VERSION}-linux-armv6l/
 cp -R * /usr/
 rm -f /tmp/node-v${ARMv6_NODEJS_VERSION}-linux-armv6l.tar.gz
 rm -fr /tmp/node-v${ARMv6_NODEJS_VERSION}-linux-armv6l/
+rm -f /usr/CHANGELOG.md
+rm -f /usr/LICENSE
+rm -f /usr/README.md

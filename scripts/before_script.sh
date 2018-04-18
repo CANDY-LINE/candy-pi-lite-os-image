@@ -27,7 +27,6 @@ function configure_stages {
   rm -f ${PIGEN_DIR}/stage{2,3,4,5}/EXPORT_IMAGE
   pushd $(pwd)/overlay
   for STAGE in $(ls -d stage*); do
-    rm -fr ../deps/pi-gen/${STAGE}
     cp -fr ${STAGE} ../deps/pi-gen/
   done
   popd

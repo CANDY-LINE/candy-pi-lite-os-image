@@ -10,14 +10,14 @@ ARMv6/ARMv7 boards are available for this image.
 - [Raspberry Pi Zero (Pin Header is required)](https://www.raspberrypi.org/products/raspberry-pi-zero/)
 - [Raspberry Pi Zero W (Pin Header is required)](https://www.raspberrypi.org/products/raspberry-pi-zero/)
 - [Raspberry Pi Zero WH](https://www.raspberrypi.org/blog/zero-wh/)
-- [Raspberry Pi  Model A+](https://www.raspberrypi.org/products/raspberry-pi-1-model/)
-- [Raspberry Pi  Model B+](https://www.raspberrypi.org/products/raspberry-pi-1-model-b/)
+- [Raspberry Pi Model A+](https://www.raspberrypi.org/products/raspberry-pi-1-model/)
+- [Raspberry Pi Model B+](https://www.raspberrypi.org/products/raspberry-pi-1-model-b/)
 - [Raspberry Pi2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
 - [Raspberry Pi3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 
 # Raspbian OS Version
 
-- Raspbian Stretch Version 2017-11-29 (Kernel v4.9) with some library updates at the time of the image creation
+- Raspbian Stretch Version March 2018 (Release date: 2018-03-13, Kernel: v4.9) with some library updates at the time of the image creation
 
 # Features
 
@@ -28,11 +28,14 @@ ARMv6/ARMv7 boards are available for this image.
 - Hardware watchdog is enabled
 - Node.js v6 (armv6l) is installed (in Maintenance LTS)
 - `ssh` is **DISABLED** by default. Place an empty file as `/boot/ssh` to enable it
-- Extra Packages
+- Extra Debian Packages
   - `git`
   - `screen`
   - `fswebcam`
   - `sense-hat`
+- Extra Python Packages
+  - `pillow`
+  - `pyserial`
 
 ## Distributions
 
@@ -42,57 +45,3 @@ ARMv6/ARMv7 boards are available for this image.
 # How to flash the image
 
 Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform app.
-
-# Revision History
-
-* 2.3.0
-  - CANDY Pi Lite Board Service 3.1.0
-  - CANDY RED 6.0.1
-
-* 2.2.1
-  - CANDY Pi Lite Board Service 3.0.1
-
-* 2.2.0
-  - CANDY Pi Lite Board Service 3.0.0
-  - CANDY RED 6.0.0
-
-* 2.1.4
-  - Fix an issue where `ufw` was inactive
-
-* 2.1.3
-  - CANDY Pi Lite Board Service 2.0.2
-
-* 2.1.2
-  - Remove nodejs package
-
-* 2.1.1
-  - CANDY Pi Lite Board Service 2.0.1
-
-* 2.1.0
-  - ARMv6 Raspberry Pi Boards(Zero/Zero W/Zero WH/Model A+/Model B+) Support
-  - CANDY Pi Lite Board Service 2.0.0
-  - CANDY RED 5.6.1
-
-* 2.0.1
-  - CANDY Pi Lite Board Service 1.8.2
-  - CANDY RED 5.6.1
-
-* 2.0.0
-  - Update Base Raspbian Stretch version to `2017-11-29-raspbian-stretch`
-  - CANDY Pi Lite Board Service 1.8.0
-  - CANDY RED 5.6.1
-
-* 1.3.0
-  - CANDY Pi Lite Board Service 1.7.3
-  - CANDY RED 5.5.0
-
-* 1.2.0
-  - CANDY Pi Lite Board Service 1.7.2
-  - CANDY RED 5.5.0
-
-* 1.1.0
-  - Sense HAT support
-  - Improve package installation time
-
-* 1.0.0
-  - Initial Release

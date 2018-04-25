@@ -14,5 +14,5 @@ curl -sL \
 # Always Enable UFW
 sed -i -e "s/ENABLED=no/ENABLED=yes/g" /etc/ufw/ufw.conf
 
-# Sense HAT node
-pip install pillow
+# Sense HAT node and SmartMesh node
+pip install pillow pyserial

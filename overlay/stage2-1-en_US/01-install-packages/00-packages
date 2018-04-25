@@ -9,3 +9,5 @@ libjpeg-dev
 bluez
 fswebcam
 sense-hat
+hostapd
+dnsmasq

@@ -2,6 +2,10 @@
 
 * 3.0.0
   - Update Base Raspbian Stretch version to `2018-03-13-raspbian-stretch`
+  - CANDY Pi Lite Board Service 4.0.0
+  - CANDY RED 6.1.0
+  - Add `hostapd` and `dnsmasq` (disabled by default)
+  - Bump Node.js version to v6.14.1
 
 * 2.1.4
   - Fix an issue where `ufw` was inactive

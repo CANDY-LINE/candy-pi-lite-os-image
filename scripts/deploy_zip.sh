@@ -5,6 +5,11 @@ if [ -z "${TAG_NAME}" ]; then
   exit 1
 fi
 
+if [ -z "${GITHUB_OAUTH_TOKEN}" ]; then
+  echo "GITHUB_OAUTH_TOKEN is required"
+  exit 1
+fi
+
 function fetch_upload_url {
   cp -f ../../scripts/release-template.json release.json
   if [ "$?" != "0" ]; then

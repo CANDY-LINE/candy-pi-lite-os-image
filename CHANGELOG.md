@@ -1,5 +1,11 @@
 # Revision History
 
+* 3.1.0
+  - CANDY Pi Lite Board Service 5.0.0
+  - CANDY RED 7.0.0
+  - Add PiCamera software
+  - Bump Node.js version to v6.14.2
+
 * 3.0.0
   - Update Base Raspbian Stretch version to `2018-03-13-raspbian-stretch`
   - CANDY Pi Lite Board Service 4.0.0

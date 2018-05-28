@@ -5,7 +5,7 @@ ln -s /usr/share/zoneinfo/UTC /etc/localtime
 
 locale-gen
 
-ARMv6_NODEJS_VERSION="6.14.1"
+ARMv6_NODEJS_VERSION="6.14.2"
 
 apt-get remove -y nodered nodejs nodejs-legacy npm
 rm -f \

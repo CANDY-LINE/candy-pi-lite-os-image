@@ -14,3 +14,4 @@ libfontconfig1-dev
 libgdk-pixbuf2.0-dev
 
 python-numpy python3-numpy
+python-picamera python3-picamera

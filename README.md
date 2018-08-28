@@ -45,3 +45,19 @@ ARMv6/ARMv7 boards are available for this image.
 # How to flash the image
 
 Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform app.
+
+# How to build images
+
+```
+# create a tag for the version then push it to remote
+
+RELEASE_VERSION=4.1.0
+
+./scripts/before_script.sh
+
+./scripts/build_img.sh
+
+GITHUB_OAUTH_TOKEN=YOUR_GITHUB_OAUTH_TOKEN \
+  TAG_NAME=${RELEASE_VERSION} \
+  ./scripts/deploy_zip.sh
+```

@@ -49,6 +49,8 @@ Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform
 # How to build images
 
 ```
+# create a tag for the version then push it to remote
+
 RELEASE_VERSION=4.1.0
 
 ./scripts/before_script.sh

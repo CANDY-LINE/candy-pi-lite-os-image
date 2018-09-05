@@ -1,5 +1,8 @@
 # Revision History
 
+* 4.2.1
+  - CANDY RED 8.0.1 with node-red-contrib-generic-ble update (v3.0.0)
+
 * 4.2.0
   - CANDY Pi Lite Board Service 6.0.0
 

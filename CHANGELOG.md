@@ -1,5 +1,11 @@
 # Revision History
 
+* 5.0.0
+  - Update Base Raspbian Stretch version to `2018-10-09-raspbian-stretch`
+  - CANDY Pi Lite Board Service 6.1.0
+  - CANDY RED 8.0.1
+  - Bump Node.js version to v8.12.0
+
 * 4.2.1
   - CANDY RED 8.0.1 with node-red-contrib-generic-ble update (v3.0.0)
 

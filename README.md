@@ -10,14 +10,15 @@ ARMv6/ARMv7 boards are available for this image.
 - [Raspberry Pi Zero (Pin Header is required)](https://www.raspberrypi.org/products/raspberry-pi-zero/)
 - [Raspberry Pi Zero W (Pin Header is required)](https://www.raspberrypi.org/products/raspberry-pi-zero/)
 - [Raspberry Pi Zero WH](https://www.raspberrypi.org/blog/zero-wh/)
-- [Raspberry Pi Model A+](https://www.raspberrypi.org/products/raspberry-pi-1-model/)
-- [Raspberry Pi Model B+](https://www.raspberrypi.org/products/raspberry-pi-1-model-b/)
-- [Raspberry Pi2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
-- [Raspberry Pi3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+- [Raspberry Pi 1 Model A+](https://www.raspberrypi.org/products/raspberry-pi-1-model/)
+- [Raspberry Pi 1 Model B+](https://www.raspberrypi.org/products/raspberry-pi-1-model-b/)
+- [Raspberry Pi 2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
+- [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+- [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
 
 # Raspbian OS Version
 
-- Raspbian Stretch Version March 2018 (Release date: 2018-03-13, Kernel: v4.9) with some library updates at the time of the image creation
+- Raspbian Stretch Version March 2018 (Release date: 2018-10-09, Kernel: v4.14) with some library updates at the time of the image creation
 
 # Features
 
@@ -51,7 +52,7 @@ Use [Etcher](https://etcher.io) for burning the image, which is a cross-platform
 ```
 # create a tag for the version then push it to remote
 
-RELEASE_VERSION=4.2.1
+RELEASE_VERSION=5.0.0
 
 ./scripts/before_script.sh
 

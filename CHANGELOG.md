@@ -1,5 +1,9 @@
 # Revision History
 
+* 6.0.1
+  - CANDY Pi Lite Board Service 6.5.0
+  - CANDY RED 8.2.2
+
 * 6.0.0
   - Update Base Raspbian Stretch version to `2018-11-13-raspbian-stretch`
   - CANDY Pi Lite Board Service 6.4.0

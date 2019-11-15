@@ -21,6 +21,7 @@ wget https://nodejs.org/dist/v${ARMv6_NODEJS_VERSION}/node-v${ARMv6_NODEJS_VERSI
 tar zxf node-v${ARMv6_NODEJS_VERSION}-linux-armv6l.tar.gz
 cd node-v${ARMv6_NODEJS_VERSION}-linux-armv6l/
 cp -R * /usr/
+rm -f /usr/CHANGELOG.md /usr/LICENSE /usr/README.md
 rm -f /tmp/node-v${ARMv6_NODEJS_VERSION}-linux-armv6l.tar.gz
 rm -fr /tmp/node-v${ARMv6_NODEJS_VERSION}-linux-armv6l/
 rm -f /usr/CHANGELOG.md

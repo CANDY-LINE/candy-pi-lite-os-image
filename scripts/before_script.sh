@@ -39,7 +39,16 @@ function configure_scripts {
   fi
 }
 
+function apply_macos_support {
+  if [ `uname` = "Darwin" ]; then
+    # Use sed -E rather than sed -r
+    sed -i -e "s/sed -r/sed -E/g" ${PIGEN_DIR}/build-docker.sh
+    exit 1
+  fi
+}
+
 clean_setup
 create_config
 configure_stages
 configure_scripts
+apply_macos_support

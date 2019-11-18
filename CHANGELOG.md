@@ -1,5 +1,13 @@
 # Revision History
 
+* 7.0.0
+  - Update Base Raspbian Buster version to `2019-07-10-raspbian-buster`
+    - **Debian Buster is introduced as of this release!**
+  - CANDY Pi Lite Board Service 7.0.1
+  - CANDY RED 8.2.3
+  - Bump Node.js version to v10.15.3
+  - CJK fonts are installed for ja_JP image
+
 * 6.0.2
   - CANDY Pi Lite Board Service 6.6.0
   - CANDY RED 8.2.2

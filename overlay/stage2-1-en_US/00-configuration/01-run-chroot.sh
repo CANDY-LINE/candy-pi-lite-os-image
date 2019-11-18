@@ -5,7 +5,7 @@ ln -s /usr/share/zoneinfo/UTC /etc/localtime
 
 locale-gen
 
-ARMv6_NODEJS_VERSION="8.15.0"
+ARMv6_NODEJS_VERSION="10.15.3"
 
 apt-get remove -y nodered nodejs nodejs-legacy npm
 rm -f \
@@ -21,6 +21,7 @@ wget https://nodejs.org/dist/v${ARMv6_NODEJS_VERSION}/node-v${ARMv6_NODEJS_VERSI
 tar zxf node-v${ARMv6_NODEJS_VERSION}-linux-armv6l.tar.gz
 cd node-v${ARMv6_NODEJS_VERSION}-linux-armv6l/
 cp -R * /usr/
+rm -f /usr/CHANGELOG.md /usr/LICENSE /usr/README.md
 rm -f /tmp/node-v${ARMv6_NODEJS_VERSION}-linux-armv6l.tar.gz
 rm -fr /tmp/node-v${ARMv6_NODEJS_VERSION}-linux-armv6l/
 rm -f /usr/CHANGELOG.md

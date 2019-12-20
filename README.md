@@ -20,7 +20,7 @@ ARMv6/ARMv7 boards are available for this image.
 
 # Raspbian OS Version
 
-- Raspbian Buster Version July 2019 (Release date: 2019-07-10, Kernel: v4.19) with some library updates at the time of the image creation
+- Raspbian Buster Version September 2019 (Release date: 2019-09-26, Kernel: v4.19) with some library updates at the time of the image creation
 
 # Features
 

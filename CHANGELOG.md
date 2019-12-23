@@ -2,8 +2,9 @@
 
 * 7.0.1
   - CANDY Pi Lite Board Service 7.0.2
-  - CANDY RED 8.3.0
+  - CANDY RED 8.3.2
   - Bump Node.js version to v10.18.0
+  - Fix a qemu issue
 
 * 7.0.0
   - Update Base Raspbian Buster version to `2019-09-26-raspbian-buster`

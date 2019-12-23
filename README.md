@@ -13,12 +13,14 @@ ARMv6/ARMv7 boards are available for this image.
 - [Raspberry Pi 1 Model A+](https://www.raspberrypi.org/products/raspberry-pi-1-model/)
 - [Raspberry Pi 1 Model B+](https://www.raspberrypi.org/products/raspberry-pi-1-model-b/)
 - [Raspberry Pi 2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
+- [Raspberry Pi 3 Model A+](https://www.raspberrypi.org/products/raspberry-pi-3-model-a-plus/)
 - [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 - [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
+- [Raspberry Pi 4 Model B](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
 
 # Raspbian OS Version
 
-- Raspbian Buster Version July 2019 (Release date: 2019-07-10, Kernel: v4.19) with some library updates at the time of the image creation
+- Raspbian Buster Version September 2019 (Release date: 2019-09-26, Kernel: v4.19) with some library updates at the time of the image creation
 
 # Features
 
@@ -52,7 +54,7 @@ Use [balenaEtcher](https://www.balena.io/etcher/) for burning the image, which i
 ```
 # create a tag for the version then push it to remote
 
-RELEASE_VERSION=7.0.0
+RELEASE_VERSION=7.0.1
 
 ./scripts/before_script.sh
 

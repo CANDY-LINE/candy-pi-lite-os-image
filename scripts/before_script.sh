@@ -43,12 +43,18 @@ function apply_macos_support {
   if [ `uname` = "Darwin" ]; then
     # Use sed -E rather than sed -r
     sed -i -e "s/sed -r/sed -E/g" ${PIGEN_DIR}/build-docker.sh
-    exit 1
   fi
+}
+
+function use_32bit_image {
+  # in order to apply the workaround for a qemu issue
+  # https://github.com/RPi-Distro/pi-gen/issues/271#issuecomment-556812205
+  sed -i -e "s/FROM debian:buster/FROM i386\\/debian:buster/g" ${PIGEN_DIR}/Dockerfile
 }
 
 clean_setup
 create_config
 configure_stages
 configure_scripts
+use_32bit_image
 apply_macos_support

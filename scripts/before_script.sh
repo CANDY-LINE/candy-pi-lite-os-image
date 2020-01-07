@@ -37,6 +37,9 @@ function configure_scripts {
   if [ "${MOVIDIUS}" != "1" ]; then
     rm -fr ${PIGEN_DIR}/stage2-0-movidius
   fi
+  if [ "${DEVICE_MANAGEMENT_ENABLED}" != "1" ]; then
+    rm -fr ${PIGEN_DIR}/stage2-2-dm
+  fi
 }
 
 function apply_macos_support {

@@ -5,7 +5,14 @@ ln -s /usr/share/zoneinfo/UTC /etc/localtime
 
 locale-gen
 
-ARMv6_NODEJS_VERSION="10.18.0"
+# ARMv6 Binaries Tweak: https://github.com/nodejs/build/issues/1677#issuecomment-486204349
+
+# Node.js v11 or before
+# ARMv6_NODEJS_BASE_URL=https://nodejs.org/dist/v
+# Node.js v12 or later
+ARMv6_NODEJS_BASE_URL=https://unofficial-builds.nodejs.org/download/release/v
+
+ARMv6_NODEJS_VERSION="12.14.0"
 
 apt-get remove -y nodered nodejs nodejs-legacy npm
 rm -f \
@@ -17,7 +24,7 @@ rm -f \
   /usr/local/bin/npm
 
 cd /tmp
-wget https://nodejs.org/dist/v${ARMv6_NODEJS_VERSION}/node-v${ARMv6_NODEJS_VERSION}-linux-armv6l.tar.gz
+wget ${ARMv6_NODEJS_BASE_URL}${ARMv6_NODEJS_VERSION}/node-v${ARMv6_NODEJS_VERSION}-linux-armv6l.tar.gz
 tar zxf node-v${ARMv6_NODEJS_VERSION}-linux-armv6l.tar.gz
 cd node-v${ARMv6_NODEJS_VERSION}-linux-armv6l/
 cp -R * /usr/

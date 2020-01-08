@@ -1,0 +1,53 @@
+# Node.js environments
+NODE_ENV=production
+NODE_OPTS=
+
+# BLE variable
+HCIDEVICE=
+
+# The URI for the welcome flow file
+WELCOME_FLOW_URL=
+
+# Set true for enabling the node palette manager
+NODE_PALETTE_ENABLED=true
+
+# Set true for enabling Node-RED projects support (Git-based version management)
+NODE_RED_PROJECTS_ENABLED=false
+
+# Authentication User ID (leave empty for disabling authentication)
+CANDY_RED_ADMIN_USER_ID=
+# Authentication User Password
+CANDY_RED_ADMIN_PASSWORD_ENC=
+# Authentication Session Timeout in seconds
+CANDY_RED_SESSION_TIMEOUT=86400
+
+# Logging Level (info by default)
+CANDY_RED_LOG_LEVEL=debug
+
+# The path to .node-red directory if any
+#CANDY_RED_HOME=
+
+# Set the --max-old-space-size (automatically allocated by default)
+#MAX_OLD_SPACE_SIZE=
+
+# Whether or not to bind IPv4 address or not (dual-stack), false by default
+CANDY_RED_BIND_IPV4_ADDR=false
+
+# Device Management
+DEVICE_MANAGEMENT_ENABLED=true
+
+# Bootstrap Server
+DEVICE_MANAGEMENT_BS_HOST=devlwms.candy-line.io
+DEVICE_MANAGEMENT_BS_HOST_IPV6=false
+DEVICE_MANAGEMENT_BS_PORT=5784
+DEVICE_MANAGEMENT_BS_DTLS=PSK
+DEVICE_MANAGEMENT_BS_DTLS_PSK_ID=
+DEVICE_MANAGEMENT_BS_DTLS_PSK=0000000000
+DEVICE_MANAGEMENT_CL_PORT=57830
+DEVICE_MANAGEMENT_RECONNECT_SEC=300
+DEVICE_MANAGEMENT_BOOTSTRAP_INTERVAL_SEC=28800
+DEVICE_MANAGEMENT_EXCLUSIVE_TO_MOBILE_NETWORK=true
+
+# Meta Info
+DEVICE_MANAGEMENT_MANUFACTURER=CANDY LINE
+DEVICE_MANAGEMENT_MODEL=

@@ -54,11 +54,11 @@ Use [balenaEtcher](https://www.balena.io/etcher/) for burning the image, which i
 ```
 # create a tag for the version then push it to remote
 
-RELEASE_VERSION=7.0.1
+RELEASE_VERSION=7.1.0
 
 ./scripts/before_script.sh
 
-./scripts/build_img.sh
+time ./scripts/build_img.sh
 
 GITHUB_OAUTH_TOKEN=YOUR_GITHUB_OAUTH_TOKEN \
   TAG_NAME=${RELEASE_VERSION} \

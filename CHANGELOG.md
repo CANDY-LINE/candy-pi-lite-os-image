@@ -1,5 +1,10 @@
 # Revision History
 
+* 7.1.0
+  - CANDY Pi Lite Board Service 7.0.2
+  - CANDY RED 9.0.0
+  - Bump Node.js version to v12.14.0
+
 * 7.0.1
   - CANDY Pi Lite Board Service 7.0.2
   - CANDY RED 8.3.2

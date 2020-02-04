@@ -29,7 +29,7 @@ ARMv6/ARMv7 boards are available for this image.
 - [CANDY RED](https://github.com/CANDY-LINE/candy-red), a Node-RED based software dedicated to [CANDY Pi Lite Board](https://translate.google.com/translate?sl=auto&tl=en&js=y&prev=_t&hl=en&ie=UTF-8&u=https%3A%2F%2Fwww.candy-line.io%2F製品一覧%2Fcandy-pi-lite%2F&edit-text=&act=url) and [CANDY EGG Cloud Service](https://translate.google.com/translate?hl=en&sl=ja&tl=en&u=https%3A%2F%2Fwww.candy-line.io%2F製品一覧%2Fcandy-red-egg%2F), is installed
 - `ufw` is enabled (denying from all traffic on `ppp0` and `wwan0`)
 - Hardware watchdog is enabled
-- Node.js v10 (armv6l) is installed (in Active LTS)
+- Node.js v12 (armv6l) is installed (in Active LTS)
 - `ssh` is **DISABLED** by default. Place an empty file as `/boot/ssh` to enable it
 - Extra Debian Packages
   - `git`

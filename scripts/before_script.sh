@@ -42,6 +42,9 @@ function configure_scripts {
   fi
   if [ -n "${CANDY_RED_HASH}" ]; then
     sed -i -e "s/CANDY_RED_HASH=latest/CANDY_RED_HASH=${CANDY_RED_HASH}/g" ${PIGEN_DIR}/stage2-1-en_US/99-candy-pi-lite/00-run-chroot.sh
+    if [ "${DEVICE_MANAGEMENT_ENABLED}" = "1" ]; then
+      rm -fr ${PIGEN_DIR}/stage2-3-ja_JP
+    fi
   fi
 }
 

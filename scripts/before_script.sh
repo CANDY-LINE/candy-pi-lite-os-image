@@ -45,6 +45,7 @@ function configure_scripts {
     if [ "${DEVICE_MANAGEMENT_ENABLED}" = "1" ] && [ "${CANDY_RED_HASH}" = "develop" ] ; then
       rm -f ${PIGEN_DIR}/stage2-1-en_US/EXPORT_IMAGE
       rm -fr ${PIGEN_DIR}/stage2-3-ja_JP
+      echo "IMG_SUFFIX=\"-lite-en_US-develop-dm\"" > ${PIGEN_DIR}/stage2-2-dm/EXPORT_IMAGE
     fi
   fi
 }

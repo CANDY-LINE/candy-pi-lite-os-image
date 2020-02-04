@@ -37,6 +37,9 @@ function fetch_upload_url {
 
 function upload_info_files {
   for INFO in `ls ./deploy/*.info`; do
+    if [[ $INFO = *"-dm.info" ]]; then
+      continue
+    fi
     echo "Uploading [${INFO}]..."
     FILENAME=`basename ${INFO}`
     curl -s \
@@ -50,6 +53,9 @@ function upload_info_files {
 
 function upload_zip_files {
   for ZIP in `ls ./deploy/*.zip`; do
+    if [[ $ZIP = *"-dm.zip" ]]; then
+      continue
+    fi
     echo "Uploading [${ZIP}]..."
     FILENAME=`basename ${ZIP}`
     curl -s \

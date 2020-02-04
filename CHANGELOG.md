@@ -1,5 +1,8 @@
 # Revision History
 
+* 8.0.0
+  - Update Base Raspbian Buster version to `2019-09-26-raspbian-buster`
+
 * 7.2.0
   - CANDY Pi Lite Board Service 7.0.3
   - CANDY RED 9.0.2
@@ -17,7 +20,7 @@
   - Fix a qemu issue
 
 * 7.0.0
-  - Update Base Raspbian Buster version to `2019-09-26-raspbian-buster`
+  - Update Base Raspbian Buster version to `2019-07-10-raspbian-buster`
     - **Debian Buster is introduced as of this release!**
   - CANDY Pi Lite Board Service 7.0.1
   - CANDY RED 8.3.0

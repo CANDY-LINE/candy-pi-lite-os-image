@@ -49,6 +49,18 @@ function apply_macos_support {
   if [ `uname` = "Darwin" ]; then
     # Use sed -E rather than sed -r
     sed -i -e "s/sed -r/sed -E/g" ${PIGEN_DIR}/build-docker.sh
+    # Use a python code rather than realpath
+    PYTHON="python"
+    PYTHON_TEST=`${PYTHON} -V`
+    if [ "$?" != "0" ]; then
+      PYTHON="python3"
+      PYTHON_TEST=`${PYTHON} -V`
+      if [ "$?" != "0" ]; then
+        echo "Python is missing"
+        exit 1
+      fi
+    fi
+    sed -i -e "s/CONFIG_FILE=\$(realpath -s \"\$CONFIG_FILE\")/CONFIG_FILE=\$(${PYTHON} -c \"import os\; print(os.path.realpath('\$CONFIG_FILE'))\")/g" ${PIGEN_DIR}/build-docker.sh
   fi
 }
 

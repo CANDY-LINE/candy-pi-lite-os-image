@@ -56,7 +56,10 @@ Use [balenaEtcher](https://www.balena.io/etcher/) for burning the image, which i
 
 RELEASE_VERSION=8.0.0
 
-./scripts/before_script.sh
+FIRST_USER_NAME="pi" \
+  FIRST_USER_PASS="raspberry" \
+  ENABLE_SSH="0" \
+  ./scripts/before_script.sh
 
 time ./scripts/build_img.sh
 

@@ -12,6 +12,13 @@ function clean_setup {
   popd
 }
 
+function add_config {
+  echo "[add_config] ${1}"
+  if [ -n "${!1}" ]; then
+    echo "$1=${!1}" >> ${PIGEN_DIR}/config
+  fi
+}
+
 function create_config {
   IMG_NAME=${2:-candy-pi-lite-raspbian}
   echo "IMG_NAME=${IMG_NAME}" > ${PIGEN_DIR}/config
@@ -19,12 +26,9 @@ function create_config {
   GIT_HASH=$(git rev-parse HEAD)
   popd
   echo "GIT_HASH=${GIT_HASH}" >> ${PIGEN_DIR}/config
-  echo "FIRST_USER_NAME=${FIRST_USER_NAME}" >> ${PIGEN_DIR}/config
-  echo "FIRST_USER_PASS=${FIRST_USER_PASS}" >> ${PIGEN_DIR}/config
-  echo "WPA_ESSID=${WPA_ESSID}" >> ${PIGEN_DIR}/config
-  echo "WPA_PASSWORD=${WPA_PASSWORD}" >> ${PIGEN_DIR}/config
-  echo "WPA_COUNTRY=${WPA_COUNTRY}" >> ${PIGEN_DIR}/config
-  echo "ENABLE_SSH=${ENABLE_SSH}" >> ${PIGEN_DIR}/config
+  add_config FIRST_USER_NAME
+  add_config FIRST_USER_PASS
+  add_config ENABLE_SSH
 }
 
 function configure_stages {

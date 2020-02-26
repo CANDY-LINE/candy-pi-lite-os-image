@@ -47,15 +47,21 @@ function configure_scripts {
   if [ "${MOVIDIUS}" != "1" ]; then
     rm -fr ${PIGEN_DIR}/stage2-0-movidius
   fi
-  if [ "${DEVICE_MANAGEMENT_ENABLED}" != "1" ]; then
-    rm -fr ${PIGEN_DIR}/stage2-2-dm
+  if [ "${CANDY_RED_PLUGIN_ENABLED}" = "1" ]; then
+    if [ ! -f "${PIGEN_DIR}/stage2-2-plugin/00-configuration/files/plugin.tgz" ]; then
+      echo "[ERROR] stage2-2-plugin/00-configuration/files/plugin.tgz is missing"
+      exit 1
+    fi
+  else
+    rm -fr ${PIGEN_DIR}/stage2-2-plugin
   fi
   if [ -n "${CANDY_RED_HASH}" ]; then
     sed -i -e "s/CANDY_RED_HASH=latest/CANDY_RED_HASH=${CANDY_RED_HASH}/g" ${PIGEN_DIR}/stage2-1-en_US/99-candy-pi-lite/00-run-chroot.sh
-    if [ "${DEVICE_MANAGEMENT_ENABLED}" = "1" ] && [ "${CANDY_RED_HASH}" = "develop" ] ; then
+    if [ "${CANDY_RED_PLUGIN_ENABLED}" = "1" ] && [ "${CANDY_RED_HASH}" = "develop" ] ; then
       rm -f ${PIGEN_DIR}/stage2-1-en_US/EXPORT_IMAGE
       rm -fr ${PIGEN_DIR}/stage2-3-ja_JP
-      echo "IMG_SUFFIX=\"-lite-en_US-develop-dm\"" > ${PIGEN_DIR}/stage2-2-dm/EXPORT_IMAGE
+      echo "IMG_SUFFIX=\"-lite-en_US-develop-plugin\"" > ${PIGEN_DIR}/stage2-2-plugin/EXPORT_IMAGE
+      echo "[INFO] Plugin included with CANDY RED on develop branch"
     fi
   fi
 }

@@ -29,6 +29,7 @@ function create_config {
   add_config FIRST_USER_NAME
   add_config FIRST_USER_PASS
   add_config ENABLE_SSH
+  add_config BOOT_APN
 }
 
 function configure_stages {

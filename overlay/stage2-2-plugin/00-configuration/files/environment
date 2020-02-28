@@ -33,9 +33,6 @@ CANDY_RED_LOG_LEVEL=debug
 # Whether or not to bind IPv4 address or not (dual-stack), false by default
 CANDY_RED_BIND_IPV4_ADDR=false
 
-# Device Management
-DEVICE_MANAGEMENT_ENABLED=true
-
 # Bootstrap Server
 DEVICE_MANAGEMENT_BS_HOST=devlwms.candy-line.io
 DEVICE_MANAGEMENT_BS_HOST_IPV6=false

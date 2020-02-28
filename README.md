@@ -59,6 +59,7 @@ RELEASE_VERSION=8.0.0
 FIRST_USER_NAME="pi" \
   FIRST_USER_PASS="raspberry" \
   ENABLE_SSH="0" \
+  BOOT_APN="my-apn" \
   ./scripts/before_script.sh
 
 time ./scripts/build_img.sh

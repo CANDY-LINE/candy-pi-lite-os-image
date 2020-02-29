@@ -4,7 +4,7 @@
 
 CANDY_PI_LITE_VERSION=master
 CANDY_RED_HASH=latest
-BOOT_APN=
+BOOT_APN=iijmobile.biz-ipv4v6
 
 if [ "${CANDY_RED_HASH}" = "latest" ]; then
     curl -vsL https://raw.githubusercontent.com/CANDY-LINE/candy-pi-lite-service/${CANDY_PI_LITE_VERSION}/install.sh | BOOT_APN="${BOOT_APN}" BOARD=RPi FORCE_INSTALL=1 CANDY_PI_LITE_APT_GET_UPDATED=1 bash

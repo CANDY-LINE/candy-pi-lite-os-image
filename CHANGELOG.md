@@ -1,5 +1,9 @@
 # Revision History
 
+* 9.0.0
+  - Update Base Raspbian Buster version to `2020-02-13-raspbian-buster`
+  - Bump Node.js version to v12.16.1
+
 * 8.0.0
   - Update Base Raspbian Buster version to `2019-09-26-raspbian-buster`
 

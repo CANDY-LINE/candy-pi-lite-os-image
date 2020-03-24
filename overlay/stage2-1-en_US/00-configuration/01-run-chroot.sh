@@ -12,7 +12,7 @@ locale-gen
 # Node.js v12 or later
 ARMv6_NODEJS_BASE_URL=https://unofficial-builds.nodejs.org/download/release/v
 
-ARMv6_NODEJS_VERSION="12.14.0"
+ARMv6_NODEJS_VERSION="12.16.1"
 
 apt-get remove -y nodered nodejs nodejs-legacy npm
 rm -f \

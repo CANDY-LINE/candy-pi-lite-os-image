@@ -1,5 +1,8 @@
 # Revision History
 
+* ?.?.?
+  - Add `fbterm` package for ja-JP image
+
 * 9.1.0
   - CANDY Pi Lite Board Service 7.1.1
   - CANDY RED 9.2.0

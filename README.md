@@ -54,7 +54,7 @@ Use [balenaEtcher](https://www.balena.io/etcher/) for burning the image, which i
 ```
 # create a tag for the version then push it to remote
 
-RELEASE_VERSION=8.0.0
+RELEASE_VERSION=9.2.0
 
 FIRST_USER_NAME="pi" \
   FIRST_USER_PASS="raspberry" \

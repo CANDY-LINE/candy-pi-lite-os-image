@@ -45,7 +45,6 @@ function configure_stages {
 }
 
 function configure_scripts {
-  cp -f $(pwd)/scripts/common ${PIGEN_DIR}/scripts
   if [ -n "${CANDY_RED_HASH}" ]; then
     sed -i -e "s/CANDY_RED_HASH=latest/CANDY_RED_HASH=${CANDY_RED_HASH}/g" ${PIGEN_DIR}/stage2-1-en_US/99-candy-pi-lite/00-run-chroot.sh
   fi

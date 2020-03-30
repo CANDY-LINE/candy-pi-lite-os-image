@@ -1,7 +1,9 @@
 # Revision History
 
-* ?.?.?
+* 9.2.0
   - Add `fbterm` package for ja-JP image
+  - Update Base Raspbian Buster version to `2020-02-13-raspbian-buster`
+  - Bump Node.js version to v12.16.1
 
 * 9.1.0
   - CANDY Pi Lite Board Service 7.1.1
@@ -10,7 +12,7 @@
 * 9.0.0
   - CANDY Pi Lite Board Service 7.1.0
   - CANDY RED 9.1.0
-  - Update Base Raspbian Buster version to `2020-02-13-raspbian-buster`
+  - ~~Update Base Raspbian Buster version to `2020-02-13-raspbian-buster`~~
   - Bump Node.js version to v12.16.1
 
 * 8.0.0

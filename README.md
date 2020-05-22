@@ -70,6 +70,7 @@ FIRST_USER_NAME="pi" \
   BOOT_APN="soracom.io" \
   ./scripts/before_script.sh
 
+# Let's build an image
 time ./scripts/build_img.sh
 
 GITHUB_OAUTH_TOKEN=YOUR_GITHUB_OAUTH_TOKEN \

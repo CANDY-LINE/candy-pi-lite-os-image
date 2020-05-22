@@ -1,5 +1,10 @@
 # Revision History
 
+* 9.3.0
+  - Bump Node.js version to v12.16.3
+  - Remove pip installation for pillow pyserial pckages
+  - BOOT_APN is now manfatory
+
 * 9.2.0
   - Add `fbterm` package for ja-JP image
   - Update Base Raspbian Buster version to `2020-02-13-raspbian-buster`

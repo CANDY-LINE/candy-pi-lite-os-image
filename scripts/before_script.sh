@@ -51,6 +51,9 @@ function configure_scripts {
   if [ -n "${BOOT_APN}" ]; then
     sed -i -e "s/BOOT_APN=iijmobile.biz-ipv4v6/BOOT_APN=${BOOT_APN}/g" ${PIGEN_DIR}/stage2-1-en_US/99-candy-pi-lite/00-run-chroot.sh
     echo "[INFO] BOOT_APN => ${BOOT_APN}"
+  else
+    echo "BOOT_APN is now mandatory."
+    exit 1
   fi
 }
 

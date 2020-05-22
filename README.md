@@ -73,6 +73,7 @@ FIRST_USER_NAME="pi" \
 # Let's build an image
 time ./scripts/build_img.sh
 
+# Upload image files
 GITHUB_OAUTH_TOKEN=YOUR_GITHUB_OAUTH_TOKEN \
   TAG_NAME=${RELEASE_VERSION} \
   ./scripts/deploy_zip.sh

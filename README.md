@@ -54,16 +54,26 @@ Use [balenaEtcher](https://www.balena.io/etcher/) for burning the image, which i
 ```
 # create a tag for the version then push it to remote
 
-RELEASE_VERSION=9.2.0
+RELEASE_VERSION=9.3.0
 
+# using IIJ Mobile
 FIRST_USER_NAME="pi" \
   FIRST_USER_PASS="raspberry" \
   ENABLE_SSH="0" \
-  BOOT_APN="my-apn" \
+  BOOT_APN="iijmobile.biz-ipv4v6" \
   ./scripts/before_script.sh
 
+# using soracom.io
+FIRST_USER_NAME="pi" \
+  FIRST_USER_PASS="raspberry" \
+  ENABLE_SSH="0" \
+  BOOT_APN="soracom.io" \
+  ./scripts/before_script.sh
+
+# Let's build an image
 time ./scripts/build_img.sh
 
+# Upload image files
 GITHUB_OAUTH_TOKEN=YOUR_GITHUB_OAUTH_TOKEN \
   TAG_NAME=${RELEASE_VERSION} \
   ./scripts/deploy_zip.sh

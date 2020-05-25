@@ -5,3 +5,4 @@ deploy*
 *.tar
 *.gz
 *.zip
+release.json

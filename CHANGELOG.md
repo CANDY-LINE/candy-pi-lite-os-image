@@ -1,9 +1,14 @@
 # Revision History
 
+* 9.3.1
+  - CANDY Pi Lite Board Service 8.0.1
+
 * 9.3.0
   - Bump Node.js version to v12.16.3
   - Remove pip installation for pillow pyserial pckages
   - BOOT_APN is now manfatory
+  - CANDY Pi Lite Board Service 8.0.0
+  - CANDY RED 9.4.0
 
 * 9.2.0
   - Add `fbterm` package for ja-JP image

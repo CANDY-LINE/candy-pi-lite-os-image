@@ -5,16 +5,17 @@
 CANDY_PI_LITE_VERSION=master
 CANDY_RED_HASH=latest
 BOOT_APN=iijmobile.biz-ipv4v6
+BUTTON_EXT=0
 
 if [ "${CANDY_RED_HASH}" = "latest" ]; then
-    curl -vsL https://raw.githubusercontent.com/CANDY-LINE/candy-pi-lite-service/${CANDY_PI_LITE_VERSION}/install.sh | BOOT_APN="${BOOT_APN}" BOARD=RPi FORCE_INSTALL=1 CANDY_PI_LITE_APT_GET_UPDATED=1 bash
+    curl -vsL https://raw.githubusercontent.com/CANDY-LINE/candy-pi-lite-service/${CANDY_PI_LITE_VERSION}/install.sh | BUTTON_EXT=${BUTTON_EXT} BOOT_APN="${BOOT_APN}" BOARD=RPi FORCE_INSTALL=1 CANDY_PI_LITE_APT_GET_UPDATED=1 bash
     if [ "$?" != "0" ]; then
         echo "FAILED TO INSTALL candy-pi-lite-service@${CANDY_PI_LITE_VERSION}"
         exit 1
     fi
 else
     # CANDY RED@${CANDY_RED_HASH} with development dependencies
-    curl -vsL https://raw.githubusercontent.com/CANDY-LINE/candy-pi-lite-service/${CANDY_PI_LITE_VERSION}/install.sh | BOOT_APN="${BOOT_APN}" CANDY_RED=0 BOARD=RPi FORCE_INSTALL=1 CANDY_PI_LITE_APT_GET_UPDATED=1 bash
+    curl -vsL https://raw.githubusercontent.com/CANDY-LINE/candy-pi-lite-service/${CANDY_PI_LITE_VERSION}/install.sh | BUTTON_EXT=${BUTTON_EXT} BOOT_APN="${BOOT_APN}" CANDY_RED=0 BOARD=RPi FORCE_INSTALL=1 CANDY_PI_LITE_APT_GET_UPDATED=1 bash
     if [ "$?" != "0" ]; then
         echo "FAILED TO INSTALL candy-pi-lite-service@${CANDY_PI_LITE_VERSION}"
         exit 1

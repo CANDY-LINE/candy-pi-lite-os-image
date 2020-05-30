@@ -56,6 +56,9 @@ function configure_scripts {
     echo "[ERROR] BOOT_APN is now mandatory."
     exit 1
   fi
+  if [ -n "${BUTTON_EXT}" ]; then
+    sed -i -e "s/BUTTON_EXT=0/BUTTON_EXT=${BUTTON_EXT}/g" ${PIGEN_DIR}/stage2-1-en_US/99-candy-pi-lite/00-run-chroot.sh
+  fi
 }
 
 function apply_macos_support {

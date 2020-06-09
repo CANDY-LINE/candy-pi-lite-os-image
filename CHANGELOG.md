@@ -1,5 +1,10 @@
 # Revision History
 
+* 9.3.2
+  - CANDY Pi Lite Board Service 8.0.3
+  - Add a new config for host name
+  - Fix release note link
+
 * 9.3.1
   - CANDY Pi Lite Board Service 8.0.1
 

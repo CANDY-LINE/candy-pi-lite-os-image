@@ -15,7 +15,7 @@ function clean_setup {
 }
 
 function add_config {
-  echo "[add_config] ${1}"
+  echo "[add_config] ${1} => [${!1}]"
   if [ -n "${!1}" ]; then
     echo "$1=${!1}" >> ${PIGEN_DIR}/config
   fi
@@ -31,6 +31,7 @@ function create_config {
   add_config FIRST_USER_NAME
   add_config FIRST_USER_PASS
   add_config ENABLE_SSH
+  add_config TARGET_HOSTNAME
 }
 
 function configure_stages {
@@ -54,6 +55,9 @@ function configure_scripts {
   else
     echo "[ERROR] BOOT_APN is now mandatory."
     exit 1
+  fi
+  if [ -n "${BUTTON_EXT}" ]; then
+    sed -i -e "s/BUTTON_EXT=0/BUTTON_EXT=${BUTTON_EXT}/g" ${PIGEN_DIR}/stage2-1-en_US/99-candy-pi-lite/00-run-chroot.sh
   fi
 }
 

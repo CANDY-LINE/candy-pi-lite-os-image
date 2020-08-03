@@ -48,6 +48,7 @@ function configure_stages {
   sed -i -e "s/RPI_FIRMWARE_VERSION=/RPI_FIRMWARE_VERSION=${RPI_FIRMWARE_VERSION}/g" ${PIGEN_DIR}/stage0/02-firmware/01-run.sh
   sed -i -e "s/libraspberrypi-bin libraspberrypi0 raspi-config/raspi-config/g" ${PIGEN_DIR}/stage1/03-install-packages/00-packages
   sed -i -e "s/libraspberrypi-dev libraspberrypi-doc libfreetype6-dev/libfreetype6-dev/g" ${PIGEN_DIR}/stage2/01-sys-tweaks/00-packages
+  sed -i -e "s/RPI_FIRMWARE_VERSION=/RPI_FIRMWARE_VERSION=${RPI_FIRMWARE_VERSION}/g" ${PIGEN_DIR}/stage0/02-firmware/01-run-chroot.sh
   rm -f ${PIGEN_DIR}/**/*/*-e
 }
 

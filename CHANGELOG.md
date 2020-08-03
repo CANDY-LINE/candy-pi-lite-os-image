@@ -1,5 +1,11 @@
 # Revision History
 
+* 9.4.0
+  - CANDY Pi Lite Board Service 9.0.0
+  - CANDY RED 9.6.0
+  - Bump Node.js version to v12.18.3
+  - Raspberry Pi OS Firmware v[1.20200601](https://github.com/raspberrypi/firmware/tree/1.20200601)
+
 * 9.3.2
   - CANDY Pi Lite Board Service 8.0.3
   - CANDY RED 9.5.0

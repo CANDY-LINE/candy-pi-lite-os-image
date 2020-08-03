@@ -1,5 +1,8 @@
 # Revision History
 
+* 9.4.1
+  - Fix the image script
+
 * 9.4.0
   - CANDY Pi Lite Board Service 9.0.0
   - CANDY RED 9.6.0

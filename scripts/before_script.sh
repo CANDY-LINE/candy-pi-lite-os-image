@@ -53,9 +53,8 @@ function configure_stages {
 }
 
 function configure_scripts {
-  if [ -n "${CANDY_RED_HASH}" ]; then
-    sed -i -e "s/CANDY_RED_HASH=latest/CANDY_RED_HASH=${CANDY_RED_HASH}/g" ${PIGEN_DIR}/stage2-1-en_US/99-candy-pi-lite/00-run-chroot.sh
-  fi
+  sed -i -e "s/CANDY_PI_LITE_VERSION=/CANDY_PI_LITE_VERSION=${CANDY_PI_LITE_VERSION}/g" ${PIGEN_DIR}/stage2-1-en_US/99-candy-pi-lite/00-run-chroot.sh
+  sed -i -e "s/CANDY_RED_HASH=/CANDY_RED_HASH=${CANDY_RED_HASH}/g" ${PIGEN_DIR}/stage2-1-en_US/99-candy-pi-lite/00-run-chroot.sh
   if [ -n "${BOOT_APN}" ]; then
     sed -i -e "s/BOOT_APN=iijmobile.biz-ipv4v6/BOOT_APN=${BOOT_APN}/g" ${PIGEN_DIR}/stage2-1-en_US/99-candy-pi-lite/00-run-chroot.sh
     echo "[INFO] BOOT_APN => ${BOOT_APN}"

@@ -11,7 +11,7 @@ RPI_FIRMWARE_PACKAGES=( raspberrypi-bootloader raspberrypi-kernel raspberrypi-ke
 i=0
 for PACKAGE in "${RPI_FIRMWARE_PACKAGES[@]}"
 do
-  DEB="${PACKAGE}_${RPI_FIRMWARE_VERSION}_armhf.deb"
+  DEB="${PACKAGE}_${RPI_FIRMWARE_VERSION}-1_armhf.deb"
   curl -sSLO "https://archive.raspberrypi.org/debian/pool/main/r/raspberrypi-firmware/${DEB}"
   mv -f ${DEB} ${FIRMWARE_DIR}/${i}_${DEB}
   let i=i+1

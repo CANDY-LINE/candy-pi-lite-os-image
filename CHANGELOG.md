@@ -1,5 +1,11 @@
 # Revision History
 
+* 10.0.0
+  - CANDY Pi Lite Board Service 10.0.1
+  - CANDY RED 9.6.0
+  - Raspberry Pi OS Firmware v[1.20200723](https://github.com/raspberrypi/firmware/tree/1.20200723)
+    - Linux Kernel 5.4
+
 * 9.4.1
   - Fix the image script
 

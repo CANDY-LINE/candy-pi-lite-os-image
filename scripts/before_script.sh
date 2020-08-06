@@ -8,6 +8,7 @@ CANDY_RED_HASH=${CANDY_RED_HASH:-"9.6.0"}
 RPI_FIRMWARE_VERSION=${RPI_FIRMWARE_VERSION:-"1.20200723"}
 BOOT_APN=${BOOT_APN:-""}
 BUTTON_EXT=${BUTTON_EXT:-""}
+BASE_ROOT_MARGIN=${BASE_ROOT_MARGIN:-"400"}
 
 function clean_setup {
   if [ "${NO_CLEAN}" != "1" ]; then
@@ -53,7 +54,8 @@ function configure_stages {
   sed -i -e "s/libraspberrypi-bin libraspberrypi0 raspi-config/raspi-config/g" ${PIGEN_DIR}/stage1/03-install-packages/00-packages
   sed -i -e "s/libraspberrypi-dev libraspberrypi-doc libfreetype6-dev/libfreetype6-dev/g" ${PIGEN_DIR}/stage2/01-sys-tweaks/00-packages
   sed -i -e "s/RPI_FIRMWARE_VERSION=/RPI_FIRMWARE_VERSION=${RPI_FIRMWARE_VERSION}/g" ${PIGEN_DIR}/stage0/02-firmware/01-run-chroot.sh
-  rm -f ${PIGEN_DIR}/**/*/*-e
+  sed -i -e "s/raspberrypi-kernel/device-tree-compiler/g" ${PIGEN_DIR}/stage0/02-firmware/01-packages
+  sed -i -e "s/ 0\.2 \+ 200 \* 1024 \* 1024/ 0.2 + ${BASE_ROOT_MARGIN} * 1024 * 1024/g" ${PIGEN_DIR}/export-image/prerun.sh
 }
 
 function configure_scripts {

@@ -21,15 +21,20 @@ if [ ! -f "/opt/candy-line/candy-pi-lite/uninstall.sh" ]; then
             echo "FAILED TO INSTALL candy-pi-lite-service@${CANDY_PI_LITE_VERSION}"
             exit 1
         fi
-        CANDY_RED_APT_GET_UPDATED=1 LOCAL_INSTALL=0 npm install -g --unsafe-perm --production https://github.com/CANDY-LINE/candy-red/archive/${CANDY_RED_HASH}.tar.gz
+        echo "Trying to install CANDY RED (v${CANDY_RED_HASH}) from NPM repo"
+        npm install -g --production --unsafe-perm candy-red@${CANDY_RED_HASH}
         if [ "$?" != "0" ]; then
-            echo "FAILED TO INSTALL candy-red@${CANDY_RED_HASH}"
-            exit 1
+            echo "NPM install failed. Now Trying to install CANDY RED (v${CANDY_RED_HASH}) from GitHub repo"
+            CANDY_RED_APT_GET_UPDATED=1 LOCAL_INSTALL=0 npm install -g --unsafe-perm --production https://github.com/CANDY-LINE/candy-red/archive/${CANDY_RED_HASH}.tar.gz
+            if [ "$?" != "0" ]; then
+                echo "FAILED TO INSTALL candy-red@${CANDY_RED_HASH}"
+                exit 1
+            fi
+            pushd /usr/lib/node_modules/candy-red
+            # Install all dependencies and run prepare stage script
+            LOCAL_INSTALL=0 DEVEL=true npm install --unsafe-perm
+            popd
         fi
-        pushd /usr/lib/node_modules/candy-red
-        # Install all dependencies and run prepare stage script
-        LOCAL_INSTALL=0 DEVEL=true npm install --unsafe-perm
-        popd
     fi
 
     # Always Enable UFW

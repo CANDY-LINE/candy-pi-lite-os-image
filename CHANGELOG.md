@@ -1,4 +1,8 @@
 # Revision History
+* 11.1.0
+  - CANDY Pi Lite Board Service 10.1.0
+  - CANDY RED 9.8.1
+
 * 11.0.0
   - CANDY Pi Lite Board Service 10.0.1
   - CANDY RED 9.7.0

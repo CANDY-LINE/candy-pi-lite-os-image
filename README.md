@@ -54,7 +54,7 @@ Use [balenaEtcher](https://www.balena.io/etcher/) for burning the image, which i
 ```
 # create a tag for the version then push it to remote
 
-RELEASE_VERSION=11.0.0
+RELEASE_VERSION=12.0.0
 
 # using IIJ Mobile
 FIRST_USER_NAME="pi" \

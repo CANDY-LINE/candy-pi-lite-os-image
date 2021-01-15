@@ -1,4 +1,10 @@
 # Revision History
+* 13.0.0
+  - CANDY Pi Lite Board Service 10.2.1
+  - CANDY RED 9.9.2
+  - Raspberry Pi OS Firmware v[1.20210111.master](https://github.com/raspberrypi/firmware/tree/1.20210111.master)
+    - Linux Kernel 5.10
+
 * 12.0.0
   - CANDY Pi Lite Board Service 10.2.1
   - CANDY RED 9.9.0

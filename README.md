@@ -78,3 +78,11 @@ GITHUB_OAUTH_TOKEN=YOUR_GITHUB_OAUTH_TOKEN \
   TAG_NAME=${RELEASE_VERSION} \
   ./scripts/deploy_zip.sh
 ```
+
+# Trouble Shooting
+
+```
+Previous stage rootfs not found
+******** Failed to build image files... ********
+```
+Remove empty directories under `pi-gen` directory.

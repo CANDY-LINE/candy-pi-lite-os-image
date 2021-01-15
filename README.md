@@ -54,8 +54,6 @@ Use [balenaEtcher](https://www.balena.io/etcher/) for burning the image, which i
 ```
 # create a tag for the version then push it to remote
 
-RELEASE_VERSION=12.0.0
-
 # using IIJ Mobile
 FIRST_USER_NAME="pi" \
   FIRST_USER_PASS="raspberry" \
@@ -74,6 +72,8 @@ FIRST_USER_NAME="pi" \
 time ./scripts/build_img.sh
 
 # Upload image files
+RELEASE_VERSION=13.0.0
+
 GITHUB_OAUTH_TOKEN=YOUR_GITHUB_OAUTH_TOKEN \
   TAG_NAME=${RELEASE_VERSION} \
   ./scripts/deploy_zip.sh

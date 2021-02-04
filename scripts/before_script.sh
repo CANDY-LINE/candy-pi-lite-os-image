@@ -21,8 +21,8 @@ function clean_setup {
 }
 
 function add_config {
-  echo "[add_config] ${1} => [${!1}]"
   if [ -n "${!1}" ]; then
+    echo "[add_config] ${1} => [${!1}]"
     echo "$1=${!1}" >> ${PIGEN_DIR}/config
   fi
 }

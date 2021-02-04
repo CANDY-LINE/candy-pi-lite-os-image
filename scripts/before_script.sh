@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+IMG_VERSION="v13.1.0"
 DEPS_DIR=$(pwd)/deps
 PIGEN_DIR=${DEPS_DIR}/pi-gen
 MOVIDIUS=${MOVIDIUS:-0}
@@ -39,6 +40,7 @@ function create_config {
   add_config FIRST_USER_PASS
   add_config ENABLE_SSH
   add_config TARGET_HOSTNAME
+  add_config IMG_VERSION
   add_config NODEJS_VERSION
 }
 

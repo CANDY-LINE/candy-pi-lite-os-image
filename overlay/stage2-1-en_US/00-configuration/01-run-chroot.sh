@@ -14,8 +14,6 @@ locale-gen
 NODEJS_BASE_URL=https://unofficial-builds.nodejs.org/download/release/v
 NODEJS_ARCH=armv6l
 
-NODEJS_VERSION="12.18.3"
-
 apt-get remove -y nodered nodejs nodejs-legacy npm
 rm -f \
   /usr/bin/node \

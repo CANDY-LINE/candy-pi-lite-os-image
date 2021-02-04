@@ -33,7 +33,7 @@ function create_config {
   pushd ${PIGEN_DIR}
   GIT_HASH=$(git rev-parse HEAD)
   popd
-  echo "GIT_HASH=${GIT_HASH}" >> ${PIGEN_DIR}/config
+  add_config GIT_HASH
   add_config FIRST_USER_NAME
   add_config FIRST_USER_PASS
   add_config ENABLE_SSH

@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
+IMG_VERSION="v13.1.0"
 DEPS_DIR=$(pwd)/deps
 PIGEN_DIR=${DEPS_DIR}/pi-gen
 MOVIDIUS=${MOVIDIUS:-0}
 CANDY_PI_LITE_VERSION=${CANDY_PI_LITE_VERSION:-"10.2.1"}
-CANDY_RED_HASH=${CANDY_RED_HASH:-"9.9.2"}
+CANDY_RED_HASH=${CANDY_RED_HASH:-"9.9.3"}
 RPI_FIRMWARE_VERSION=${RPI_FIRMWARE_VERSION:-"1.20210108"}
+NODEJS_VERSION="12.20.1"
 BOOT_APN=${BOOT_APN:-""}
 BUTTON_EXT=${BUTTON_EXT:-""}
 BASE_ROOT_MARGIN=${BASE_ROOT_MARGIN:-"400"}
@@ -21,23 +23,25 @@ function clean_setup {
 }
 
 function add_config {
-  echo "[add_config] ${1} => [${!1}]"
   if [ -n "${!1}" ]; then
-    echo "$1=${!1}" >> ${PIGEN_DIR}/config
+    echo "[add_config] ${1} => [${!1}]"
+    echo "export $1=${!1}" >> ${PIGEN_DIR}/config
   fi
 }
 
 function create_config {
-  IMG_NAME=${2:-candy-pi-lite-raspbian}
+  IMG_NAME="${IMG_NAME:-candy-pi-lite-raspbian}"
   echo "IMG_NAME=${IMG_NAME}" > ${PIGEN_DIR}/config
   pushd ${PIGEN_DIR}
   GIT_HASH=$(git rev-parse HEAD)
   popd
-  echo "GIT_HASH=${GIT_HASH}" >> ${PIGEN_DIR}/config
+  add_config GIT_HASH
   add_config FIRST_USER_NAME
   add_config FIRST_USER_PASS
   add_config ENABLE_SSH
   add_config TARGET_HOSTNAME
+  add_config IMG_VERSION
+  add_config NODEJS_VERSION
 }
 
 function configure_stages {

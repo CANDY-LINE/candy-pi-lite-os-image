@@ -1,4 +1,9 @@
 # Revision History
+* 13.1.0
+  - Node.js v12.20.1
+  - CANDY RED 9.9.3
+  - Add a file containing the published OS image version
+
 * 13.0.0
   - CANDY Pi Lite Board Service 10.2.1
   - CANDY RED 9.9.2

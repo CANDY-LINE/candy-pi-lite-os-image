@@ -30,7 +30,7 @@ function add_config {
 }
 
 function create_config {
-  IMG_NAME=${2:-candy-pi-lite-raspbian}
+  IMG_NAME="${IMG_NAME:-candy-pi-lite-raspbian}"
   echo "IMG_NAME=${IMG_NAME}" > ${PIGEN_DIR}/config
   pushd ${PIGEN_DIR}
   GIT_HASH=$(git rev-parse HEAD)

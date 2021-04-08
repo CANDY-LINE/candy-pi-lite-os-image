@@ -1,7 +1,7 @@
 # Revision History
 * 14.0.0
   - Node.js v12.22.1
-  - CANDY RED 9.10.0
+  - CANDY RED 9.9.3
   - Update Base Raspbian Buster version to `2021-03-04-raspbian-buster`
   - Raspberry Pi OS Firmware v[1.20210303](https://github.com/raspberrypi/firmware/tree/1.20210303)
     - Linux Kernel 5.10

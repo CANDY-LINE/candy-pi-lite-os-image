@@ -8,6 +8,8 @@ BOOT_APN=iijmobile.biz-ipv4v6
 BUTTON_EXT=0
 
 if [ ! -f "/opt/candy-line/candy-pi-lite/uninstall.sh" ]; then
+    set +e
+
     if [ "${CANDY_RED_HASH}" = "latest" ]; then
         curl -vsL https://raw.githubusercontent.com/CANDY-LINE/candy-pi-lite-service/${CANDY_PI_LITE_VERSION}/install.sh | BUTTON_EXT=${BUTTON_EXT} BOOT_APN="${BOOT_APN}" BOARD=RPi FORCE_INSTALL=1 CANDY_PI_LITE_APT_GET_UPDATED=1 bash
         if [ "$?" != "0" ]; then
@@ -42,4 +44,6 @@ if [ ! -f "/opt/candy-line/candy-pi-lite/uninstall.sh" ]; then
 
     # Clean cache files
     npm cache clean --force
+
+    set -e
 fi

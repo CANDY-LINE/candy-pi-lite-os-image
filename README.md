@@ -86,3 +86,11 @@ Previous stage rootfs not found
 ******** Failed to build image files... ********
 ```
 Remove empty directories under `pi-gen` directory.
+
+# How to release
+
+1. Edit `IMG_VERSION`, `CANDY_PI_LITE_VERSION`, `CANDY_RED_HASH`, `RPI_FIRMWARE_VERSION` and `NODEJS_VERSION` in before_script.sh
+1. Create image files
+1. Test if they're working
+1. Upload image files and package info
+1. Tag the version

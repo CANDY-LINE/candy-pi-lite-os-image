@@ -12,7 +12,7 @@ function clean_setup {
   git clean -f -d
   popd
   docker rm -f pigen_work
-  docker volume prune -f
+  docker builder prune -f
 }
 
 clean_setup

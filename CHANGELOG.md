@@ -1,6 +1,8 @@
 # Revision History
 * ?.?.?
   - CANDY RED 9.11.0
+  - Raspberry Pi OS Firmware v[1.20210430](https://github.com/raspberrypi/firmware/tree/1.20210430)
+    - Linux Kernel 5.10
 
 * 14.0.0
   - Node.js v12.22.1

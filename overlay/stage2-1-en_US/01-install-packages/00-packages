@@ -11,3 +11,5 @@ fswebcam
 sense-hat
 hostapd
 dnsmasq
+logrotate
+avahi-daemon

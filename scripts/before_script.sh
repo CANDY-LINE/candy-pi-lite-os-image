@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-IMG_VERSION="v14.0.0"
+IMG_VERSION="v15.0.0"
 DEPS_DIR=$(pwd)/deps
 PIGEN_DIR=${DEPS_DIR}/pi-gen
 MOVIDIUS=${MOVIDIUS:-0}

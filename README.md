@@ -72,7 +72,7 @@ FIRST_USER_NAME="pi" \
 time ./scripts/build_img.sh
 
 # Upload image files
-RELEASE_VERSION=14.0.0
+RELEASE_VERSION=15.0.0
 
 GITHUB_OAUTH_TOKEN=YOUR_GITHUB_OAUTH_TOKEN \
   TAG_NAME=${RELEASE_VERSION} \
@@ -86,3 +86,11 @@ Previous stage rootfs not found
 ******** Failed to build image files... ********
 ```
 Remove empty directories under `pi-gen` directory.
+
+# How to release
+
+1. Edit `IMG_VERSION`, `CANDY_PI_LITE_VERSION`, `CANDY_RED_HASH`, `RPI_FIRMWARE_VERSION` and `NODEJS_VERSION` in before_script.sh
+1. Create image files
+1. Test if they're working
+1. Upload image files and package info
+1. Tag the version

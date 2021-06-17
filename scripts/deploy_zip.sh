@@ -37,7 +37,7 @@ function fetch_upload_url {
 
 function upload_info_files {
   for INFO in `ls ./deploy/*.info`; do
-    if [[ $INFO = *"-dm.info" ]]; then
+    if [[ $INFO != *"-candy-pi-lite-raspbian-lite-en_US.info" ]] && [[ $INFO != *"-candy-pi-lite-raspbian-lite-ja_JP.info" ]]; then
       continue
     fi
     echo "Uploading [${INFO}]..."
@@ -53,7 +53,7 @@ function upload_info_files {
 
 function upload_zip_files {
   for ZIP in `ls ./deploy/*.zip`; do
-    if [[ $ZIP = *"-dm.zip" ]]; then
+    if [[ $ZIP != *"-candy-pi-lite-raspbian-lite-en_US.zip" ]] && [[ $ZIP != *"-candy-pi-lite-raspbian-lite-ja_JP.zip" ]]; then
       continue
     fi
     echo "Uploading [${ZIP}]..."

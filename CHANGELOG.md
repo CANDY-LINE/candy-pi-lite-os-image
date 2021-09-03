@@ -1,4 +1,11 @@
 # Revision History
+* 16.0.0
+  - CANDY Pi Lite Board Service 10.4.0
+  - CANDY RED 9.11.0
+  - Update Base Raspbian Buster version to `2021-05-07-raspbian-buster`
+  - Raspberry Pi OS Firmware v[1.20210831](https://github.com/raspberrypi/firmware/tree/1.20210831)
+    - Linux Kernel 5.10
+
 * 15.0.0
   - CANDY Pi Lite Board Service 10.3.0
   - CANDY RED 9.11.0
